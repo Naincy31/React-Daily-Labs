@@ -1,38 +1,65 @@
-.App {
-  text-align: center;
+body {
+  background-color: #f3f4f6d7;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Cards {
+  display: flex;
+  gap: 20px;
+  margin: 50px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card {
+  width: 300px;
+  height: 100px;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+a {
+  text-decoration: none;
+}
+
+h1 {
+  color: black;
+  font-size: 1.5rem;
+}
+
+.Counter,
+.Guess-Number {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+#count {
+  font-weight: bolder;
+  font-size: 3rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button {
+  color: black;
+  font-size: 1rem;
+  padding: 10px 15px;
+  background-color: aqua;
+  border-width: 1px;
+  border-radius: 5px;
+}
+
+.buttons>button {
+  margin-right: 5px;
+}
+
+input {
+  width: 5rem;
+  height: 2rem;
+  font-size: 1rem;
+}
+
+.Guess-Number>input {
+  width: 150px;
+  margin-bottom: 10px;
 }

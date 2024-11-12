@@ -19,6 +19,11 @@ function App() {
           <h1>String Transform</h1>
         </div>
       </Link>
+      <Link to="/telephone-formatter">
+        <div className='card'>
+          <h1>Telephone Formatter</h1>
+        </div>
+      </Link>
     </div>
   );
 }

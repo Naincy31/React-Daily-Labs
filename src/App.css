@@ -63,3 +63,40 @@ input {
   width: 150px;
   margin-bottom: 10px;
 }
+
+.String {
+  text-align: center;
+  margin: auto;
+  width: 600px;
+}
+
+.String>input {
+  width: 600px;
+  margin-bottom: 30px;
+}
+
+.String>.box {
+  position: relative;
+  background-color: #F5F5DC;
+  height: 60px;
+  width: 600px;
+  margin-bottom: 20px;
+}
+
+.String>.box>.label {
+  position: absolute;
+  top: -20%;
+  left: 4%;
+  background-color: black;
+  height: 20px;
+  color: white;
+  font-size: 13px;
+  text-align: center;
+  padding: 1px 3px;
+}
+
+.String>.box>p {
+  position: absolute;
+  left: 4%;
+  top: 5%;
+}

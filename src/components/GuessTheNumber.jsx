@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 
 const GuessTheNumber = () => {
-    const theNumber = 85
+    const theNumber = Math.floor(Math.random() * 101);
     const initialGuessLimit = 6
     const [ inputValue, setInputValue ] = useState("")
     const [ text, setText ] = useState(null)

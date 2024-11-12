@@ -14,6 +14,11 @@ function App() {
           <h1>Guess the number</h1>
         </div>
       </Link>
+      <Link to="/string-transform">
+        <div className='card'>
+          <h1>String Transform</h1>
+        </div>
+      </Link>
     </div>
   );
 }

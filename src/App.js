@@ -24,6 +24,11 @@ function App() {
           <h1>Telephone Formatter</h1>
         </div>
       </Link>
+      <Link to="/toast">
+        <div className='card'>
+          <h1>Toast/Snackbar</h1>
+        </div>
+      </Link>
     </div>
   );
 }

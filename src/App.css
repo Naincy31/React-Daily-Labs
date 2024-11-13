@@ -55,8 +55,6 @@ button {
 }
 
 input {
-  width: 5rem;
-  height: 2rem;
   font-size: 1rem;
 }
 
@@ -105,4 +103,37 @@ input {
 
 .Telephone>input {
   width: 300px;
+}
+
+.Toast {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.Toast>* {
+  width: 250px;
+  padding: 10px 5px;
+}
+
+.Toast>input {
+  height: 15px;
+}
+
+.Toast>.message {
+  width: 200px;
+  height: 15px;
+}
+
+.Toast>.duration-slider {
+  display: flex;
+  gap: 10px;
+}
+
+.Toast>.duration-slider>input {
+  width: 130px;
 }

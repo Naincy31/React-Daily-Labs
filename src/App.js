@@ -29,6 +29,11 @@ function App() {
           <h1>Toast/Snackbar</h1>
         </div>
       </Link>
+      <Link to="/column-table">
+        <div className='card'>
+          <h1>Column Table</h1>
+        </div>
+      </Link>
     </div>
   );
 }

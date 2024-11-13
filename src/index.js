@@ -7,6 +7,7 @@ import GuessTheNumber from './components/GuessTheNumber';
 import StringTransform from './components/StringTransform';
 import TelephoneFormatter from './components/TelephoneFormatter';
 import Toast from './components/Toast';
+import ColumnTable from './components/ColumnTable';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -19,6 +20,7 @@ root.render(
         <Route path="/string-transform" element={<StringTransform />} />
         <Route path="/telephone-formatter" element={<TelephoneFormatter />} />
         <Route path="/toast" element={<Toast />} />
+        <Route path="/column-table" element={<ColumnTable />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

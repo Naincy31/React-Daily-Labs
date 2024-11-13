@@ -137,3 +137,29 @@ input {
 .Toast>.duration-slider>input {
   width: 130px;
 }
+
+.column-table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  gap: 20px;
+}
+
+.column-table>.rows-columns {
+  display: flex;
+  gap: 10px;
+}
+
+.rows,
+.columns {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.cell {
+  border: 1px solid black;
+  padding: 15px 20px;
+  margin: 1px;
+}

@@ -164,7 +164,8 @@ input {
   margin: 1px;
 }
 
-.color-me {
+.color-me,
+.bmi-calc {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -202,4 +203,22 @@ input {
 .input-button>input {
   padding: 10px;
   border: 1px solid #ddd;
+}
+
+.bmi-calc>.inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.inputs>label {
+  font-weight: bold;
+}
+
+.inputs>input {
+  width: 90%;
+  padding: 8px;
+  font-size: small;
 }

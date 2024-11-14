@@ -39,6 +39,11 @@ function App() {
           <h1>Color Me</h1>
         </div>
       </Link>
+      <Link to="/bmi-calc">
+        <div className='card'>
+          <h1>BMI Calculator</h1>
+        </div>
+      </Link>
     </div>
   );
 }

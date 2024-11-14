@@ -34,6 +34,11 @@ function App() {
           <h1>Column Table</h1>
         </div>
       </Link>
+      <Link to="/color-me">
+        <div className='card'>
+          <h1>Color Me</h1>
+        </div>
+      </Link>
     </div>
   );
 }

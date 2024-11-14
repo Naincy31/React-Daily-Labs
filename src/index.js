@@ -8,6 +8,7 @@ import StringTransform from './components/StringTransform';
 import TelephoneFormatter from './components/TelephoneFormatter';
 import Toast from './components/Toast';
 import ColumnTable from './components/ColumnTable';
+import ColorMe from './components/ColorMe';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -21,6 +22,7 @@ root.render(
         <Route path="/telephone-formatter" element={<TelephoneFormatter />} />
         <Route path="/toast" element={<Toast />} />
         <Route path="/column-table" element={<ColumnTable />} />
+        <Route path="/color-me" element={<ColorMe />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

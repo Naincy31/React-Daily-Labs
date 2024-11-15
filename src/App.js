@@ -49,6 +49,11 @@ function App() {
           <h1>Dice Game</h1>
         </div>
       </Link>
+      <Link to="/file-uploader">
+        <div className='card'>
+          <h1>File Uploader</h1>
+        </div>
+      </Link>
     </div>
   );
 }

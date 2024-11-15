@@ -255,6 +255,11 @@ input {
   background-color: brown;
   border-radius: 5%;
   position: relative;
+  transition: transform 0.6s ease;
+}
+
+.dice:hover {
+  transform: rotate(180deg);
 }
 
 .dice-game>button {
@@ -376,4 +381,41 @@ input {
 .dice-6 .dot:nth-child(6) {
   top: 37%;
   right: 10%;
+}
+
+.file-uploader {
+  background-color: white;
+  height: 350px;
+  width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.file-uploader>h2 {
+  color: rgb(105, 147, 244);
+}
+
+.file-uploader>.file-input {
+  border: 2px dashed rgb(105, 147, 244);
+  width: 350px;
+  height: 150px;
+  cursor: pointer;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.file {
+  margin: auto;
+  height: 50px;
+  width: 350px;
+  display: flex;
+  align-items: center;
+  background-color: rgb(105, 147, 244, 0.2);
+  padding: 5px;
+  border-radius: 5px;
 }

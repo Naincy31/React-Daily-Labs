@@ -11,6 +11,7 @@ import ColumnTable from './components/ColumnTable';
 import ColorMe from './components/ColorMe';
 import BMICalculator from './components/BMICalculator';
 import DiceGame from './components/DiceGame';
+import FileUploader from './components/FileUploader';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -27,6 +28,7 @@ root.render(
         <Route path="/color-me" element={<ColorMe />} />
         <Route path="/bmi-calc" element={<BMICalculator />} />
         <Route path="/dice-game" element={<DiceGame />} />
+        <Route path="/file-uploader" element={<FileUploader />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

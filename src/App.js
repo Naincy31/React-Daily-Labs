@@ -44,6 +44,11 @@ function App() {
           <h1>BMI Calculator</h1>
         </div>
       </Link>
+      <Link to="/dice-game">
+        <div className='card'>
+          <h1>Dice Game</h1>
+        </div>
+      </Link>
     </div>
   );
 }

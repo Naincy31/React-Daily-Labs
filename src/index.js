@@ -10,6 +10,7 @@ import Toast from './components/Toast';
 import ColumnTable from './components/ColumnTable';
 import ColorMe from './components/ColorMe';
 import BMICalculator from './components/BMICalculator';
+import DiceGame from './components/DiceGame';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -25,6 +26,7 @@ root.render(
         <Route path="/column-table" element={<ColumnTable />} />
         <Route path="/color-me" element={<ColorMe />} />
         <Route path="/bmi-calc" element={<BMICalculator />} />
+        <Route path="/dice-game" element={<DiceGame />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

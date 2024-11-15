@@ -222,3 +222,158 @@ input {
   padding: 8px;
   font-size: small;
 }
+
+.dice-game {
+  background-color: black;
+  width: 550px;
+  height: 550px;
+  margin: auto;
+  border-radius: 5%;
+  display: flex;
+  flex-direction: column;
+  color: brown;
+  font-size: 20px;
+  align-items: center;
+}
+
+.dice-game>h2 {
+  margin-top: 30px;
+}
+
+.dice-game>.game {
+  display: flex;
+  gap: 50px;
+  text-align: center;
+  margin: 10px 0 50px 0;
+}
+
+.game>.player-1>.dice,
+.game>.player-2>.dice {
+  margin-top: 30px;
+  width: 200px;
+  height: 200px;
+  background-color: brown;
+  border-radius: 5%;
+  position: relative;
+}
+
+.dice-game>button {
+  background-color: #ff6666;
+}
+
+.dice-game .dot {
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  position: absolute;
+}
+
+.dice-1 .dot:nth-child(1) {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.dice-2 .dot:nth-child(1) {
+  top: 10%;
+  left: 10%;
+}
+
+.dice-2 .dot:nth-child(2) {
+  bottom: 10%;
+  right: 10%;
+}
+
+.dice-3 .dot:nth-child(1) {
+  top: 10%;
+  left: 10%;
+}
+
+.dice-3 .dot:nth-child(2) {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.dice-3 .dot:nth-child(3) {
+  bottom: 10%;
+  right: 10%;
+}
+
+.dice-4 .dot:nth-child(1) {
+  top: 10%;
+  left: 10%;
+}
+
+.dice-4 .dot:nth-child(2) {
+  top: 10%;
+  right: 10%;
+}
+
+.dice-4 .dot:nth-child(3) {
+  bottom: 10%;
+  left: 10%;
+}
+
+.dice-4 .dot:nth-child(4) {
+  bottom: 10%;
+  right: 10%;
+}
+
+.dice-5 .dot:nth-child(1) {
+  top: 10%;
+  left: 10%;
+}
+
+.dice-5 .dot:nth-child(2) {
+  top: 10%;
+  right: 10%;
+}
+
+.dice-5 .dot:nth-child(3) {
+  bottom: 10%;
+  left: 10%;
+}
+
+.dice-5 .dot:nth-child(4) {
+  bottom: 10%;
+  right: 10%;
+}
+
+.dice-5 .dot:nth-child(5) {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.dice-6 .dot:nth-child(1) {
+  top: 10%;
+  left: 10%;
+}
+
+.dice-6 .dot:nth-child(2) {
+  top: 10%;
+  right: 10%;
+}
+
+.dice-6 .dot:nth-child(3) {
+  bottom: 10%;
+  left: 10%;
+}
+
+.dice-6 .dot:nth-child(4) {
+  bottom: 10%;
+  right: 10%;
+}
+
+.dice-6 .dot:nth-child(5) {
+  top: 37%;
+  left: 10%;
+}
+
+.dice-6 .dot:nth-child(6) {
+  top: 37%;
+  right: 10%;
+}

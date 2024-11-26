@@ -29,11 +29,6 @@ function App() {
           <h1>Toast/Snackbar</h1>
         </div>
       </Link>
-      <Link to="/column-table">
-        <div className='card'>
-          <h1>Column Table</h1>
-        </div>
-      </Link>
       <Link to="/color-me">
         <div className='card'>
           <h1>Color Me</h1>
@@ -52,6 +47,11 @@ function App() {
       <Link to="/file-uploader">
         <div className='card'>
           <h1>File Uploader</h1>
+        </div>
+      </Link>
+      <Link to="/bill-split">
+        <div className='card'>
+          <h1>Bill Splitter</h1>
         </div>
       </Link>
     </div>

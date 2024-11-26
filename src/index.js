@@ -7,11 +7,11 @@ import GuessTheNumber from './components/GuessTheNumber';
 import StringTransform from './components/StringTransform';
 import TelephoneFormatter from './components/TelephoneFormatter';
 import Toast from './components/Toast';
-import ColumnTable from './components/ColumnTable';
 import ColorMe from './components/ColorMe';
 import BMICalculator from './components/BMICalculator';
 import DiceGame from './components/DiceGame';
 import FileUploader from './components/FileUploader';
+import BillSplit from './components/BillSplit';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -24,11 +24,11 @@ root.render(
         <Route path="/string-transform" element={<StringTransform />} />
         <Route path="/telephone-formatter" element={<TelephoneFormatter />} />
         <Route path="/toast" element={<Toast />} />
-        <Route path="/column-table" element={<ColumnTable />} />
         <Route path="/color-me" element={<ColorMe />} />
         <Route path="/bmi-calc" element={<BMICalculator />} />
         <Route path="/dice-game" element={<DiceGame />} />
         <Route path="/file-uploader" element={<FileUploader />} />
+        <Route path='/bill-split' element={<BillSplit />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

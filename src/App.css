@@ -138,32 +138,6 @@ input {
   width: 130px;
 }
 
-.column-table {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 50px;
-  gap: 20px;
-}
-
-.column-table>.rows-columns {
-  display: flex;
-  gap: 10px;
-}
-
-.rows,
-.columns {
-  display: flex;
-  justify-content: center;
-  gap: 5px;
-}
-
-.cell {
-  border: 1px solid black;
-  padding: 15px 20px;
-  margin: 1px;
-}
-
 .color-me,
 .bmi-calc {
   display: flex;
@@ -418,4 +392,115 @@ input {
   background-color: rgb(105, 147, 244, 0.2);
   padding: 5px;
   border-radius: 5px;
+}
+
+.bill-split-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 700px;
+  margin: auto;
+  min-height: 100%;
+  gap: 10px;
+  height: 500px;
+}
+
+#display-bill,
+#input-bill {
+  padding: 20px;
+  flex: 1;
+}
+
+#input-bill {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bill-split-container label {
+  color: #823CFF;
+  font-size: 20px;
+}
+
+#input-container {
+  border: 1px solid #000;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  width: 90%;
+  color: #823CFF;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+#input-container>input {
+  border: none;
+  outline: none;
+  margin-left: 5px;
+  color: #823CFF;
+  font-weight: 300;
+}
+
+#input-container>input::-webkit-outer-spin-button,
+#input-container>input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#tip-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 10px;
+  gap: 10px;
+}
+
+#tip-buttons>* {
+  width: 90px;
+  text-align: center;
+  background-color: #f2f2f2;
+}
+
+.bill-split-container button {
+  cursor: not-allowed;
+  border: none;
+  color: #B4B4B4;
+}
+
+#tip-buttons button.true {
+  cursor: pointer;
+  background-color: #823CFF;
+  color: #fff;
+}
+
+#people,
+#custom-tip {
+  cursor: not-allowed;
+  padding: 10px;
+  width: 90%;
+  margin: 10px 0;
+  background-color: #CCC;
+  border: none;
+}
+
+#generate {
+  background-color: #f2f2f2;
+}
+
+#display-bill {
+  background-color: rgb(52, 86, 139);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #fff;
+  border-radius: 10px;
+  min-height: 300px;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+#reset {
+  background-color: #6C84A9;
+  color: #50617B;
 }

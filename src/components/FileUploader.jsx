@@ -28,8 +28,8 @@ const FileUploader = () => {
         <input
             type="file"
             ref={fileInputRef}
-            style={{ display: 'none' }} // Hide the file input
-            onChange={handleFileChange} // Handle file selection
+            style={{ display: 'none' }} 
+            onChange={handleFileChange}
         />
         {file && 
             <div className="file">

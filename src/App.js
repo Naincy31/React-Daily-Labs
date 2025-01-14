@@ -54,6 +54,11 @@ function App() {
           <h1>Bill Splitter</h1>
         </div>
       </Link>
+      <Link to="/image-gallery">
+        <div className='card'>
+          <h1>Image Gallery</h1>
+        </div>
+      </Link>
     </div>
   );
 }

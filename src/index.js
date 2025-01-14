@@ -12,6 +12,7 @@ import BMICalculator from './components/BMICalculator';
 import DiceGame from './components/DiceGame';
 import FileUploader from './components/FileUploader';
 import BillSplit from './components/BillSplit';
+import ImageGallery from './components/ImageGallery';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -29,6 +30,7 @@ root.render(
         <Route path="/dice-game" element={<DiceGame />} />
         <Route path="/file-uploader" element={<FileUploader />} />
         <Route path='/bill-split' element={<BillSplit />} />
+        <Route path='/image-gallery' element={<ImageGallery />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

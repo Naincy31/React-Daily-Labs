@@ -504,3 +504,34 @@ input {
   background-color: #6C84A9;
   color: #50617B;
 }
+
+.image-gallery {
+  text-align: center;
+}
+
+.images-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.images-container img {
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  object-fit: cover;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 40%);
+}
+
+.images-container img:hover {
+  transform: scale(1.1);
+}
+
+.selected-img-container {
+  margin-top: 50px;
+}
+
+.selected-img {
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 50%);
+}

@@ -59,6 +59,11 @@ function App() {
           <h1>Image Gallery</h1>
         </div>
       </Link>
+      <Link to="/tic-tac-toe">
+        <div className='card'>
+          <h1>Tic Tac Toe</h1>
+        </div>
+      </Link>
     </div>
   );
 }

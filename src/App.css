@@ -535,3 +535,45 @@ input {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 50%);
 }
+
+.tic-tac-toe {
+  width: 600px;
+  margin: auto;
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.tic-tac-toe>.status-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.game-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 300px;
+  justify-self: center;
+  margin: 20px 0;
+}
+
+.game-container .square {
+  height: 80px;
+  border: 1px solid grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.rematch {
+  background-color: #F0F0F0;
+  border: none;
+  color: #000;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 15px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}

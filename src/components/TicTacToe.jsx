@@ -1,26 +1,50 @@
-import {useState} from 'react'
-
-const size = 3
-const winPatterns = [
-    [0, 1, 2], //first row
-    [3, 4, 5], //second row
-    [6, 7, 8], //third row
-    [0, 4, 8], //diagonal l to r
-    [2, 4, 6], //diagonal r to l
-    [0, 3, 6], //first col
-    [1, 4, 7], //second col
-    [2, 5, 8], //third col
-]
+import {useState, useMemo, useEffect} from 'react'
 
 const TicTacToe = () => {
-    const [squares, setSquares] = useState(Array(size * size).fill(null))
-    const [gameStatus, setGameStatus] = useState("Playing")
+    
+    const [gridSize, setGridSize] = useState(null)
+    const [squares, setSquares] = useState([])
+    const [gameStatus, setGameStatus] = useState(null)
     const [playersStatus, setPlayersStatus] = useState({x: 0, o: 0})
     const [drawStatus, setDrawStatus] = useState(0)
-    const [currentPlayer, setCurrentPlayer] = useState('X')
+    const [currentPlayer, setCurrentPlayer] = useState('X')    
+
+    const winPatterns = useMemo(() => {
+        if(!gridSize) return []
+        const patterns = []
+
+        //row patterns
+        for(let i = 0; i < gridSize; i++){
+            patterns.push(Array.from({length: gridSize}, (_, j) => i * gridSize + j))
+        }
+
+        //column patterns
+        for(let i = 0; i < gridSize; i++){
+            patterns.push(Array.from({length: gridSize}, (_, j) => j * gridSize + i))
+        }
+
+        //diagonal from l to r
+        patterns.push(Array.from({length: gridSize}, (_, i) => i * (gridSize + 1)))
+
+        //diagonal from r to l
+        patterns.push(Array.from({length: gridSize}, (_, i) => (i + 1) * (gridSize - 1)))
+
+        return patterns
+    }, [gridSize])
+
+    useEffect(() => {
+        if(gridSize) {
+            setSquares(Array(gridSize * gridSize).fill(null))
+            handleRematch()
+        }
+    }, [gridSize])
+
+    useEffect(() => {
+        setGameStatus(`${currentPlayer} to move`)
+    }, [currentPlayer])
     
     const handleClick = (index) => {
-        if(squares[index] || gameStatus !== "Playing") return;
+        if(squares[index] || !gameStatus.includes('to move')) return;
 
         const updatedSquares = [...squares]
         updatedSquares[index] = currentPlayer
@@ -48,42 +72,62 @@ const TicTacToe = () => {
     }
 
     const handleRematch = () => {
-        setGameStatus('Playing')
-        setSquares(Array(size * size).fill(null))
+        setSquares(Array(gridSize * gridSize).fill(null))
         setCurrentPlayer('X')
+        setGameStatus(`X to move`)
     }
 
   return (
-    <div className='tic-tac-toe'>
-        <h3>Status: {gameStatus}</h3>
-        <div className="status-container">
-            <div className="x-container">
-                <h3>X</h3>
-                <h3>{playersStatus.x} Wins</h3>
+    <>
+        {!gridSize ? (
+            <div className='grid-size-container'>
+                <h3>Choose a grid size: </h3>
+                <button onClick={() => setGridSize(3)}>3x3</button>
+                <button onClick={() => setGridSize(4)}>4x4</button>
+                <button onClick={() => setGridSize(5)}>5x5</button>
             </div>
-            <div className="o-container">
-                <h3>O</h3>
-                <h3>{playersStatus.o} Wins</h3>
-            </div>
-            <div className="draw">
-                <h3>=</h3>
-                <h3>{drawStatus} Draws</h3>
-            </div>
-        </div>  
-        <div className="game-container">
-            {squares.map((square, index) => 
-            (
-                <div 
-                    className="square" 
-                    key={index} 
-                    onClick={() => handleClick(index)}
-                >
-                    {square}
+            ) : (
+                <div className='tic-tac-toe'>
+                    <h3>Status: {gameStatus && gameStatus}</h3>
+                    <div className="status-container">
+                        <div className="x-container">
+                            <h3>X</h3>
+                            <h3>{playersStatus.x} Wins</h3>
+                        </div>
+                        <div className="o-container">
+                            <h3>O</h3>
+                            <h3>{playersStatus.o} Wins</h3>
+                        </div>
+                        <div className="draw">
+                            <h3>=</h3>
+                            <h3>{drawStatus} Draws</h3>
+                        </div>
+                    </div>  
+                    <div className="game-container" style={{display: 'grid', gridTemplateColumns: `repeat(${gridSize}, 1fr)`, width: `${gridSize * 100}px`}}>
+                        {squares.map((square, index) => 
+                        (
+                            <div 
+                                className="square" 
+                                key={index} 
+                                onClick={() => handleClick(index)}
+                            >
+                                {square}
+                            </div>
+                        ))}
+                    </div>
+                    <button className="rematch" onClick={handleRematch}>Rematch</button>
+                    <div className="grid-size-change">
+                        <h3>Want to change the grid size?</h3>
+                        <button onClick={() => setGridSize(3)}>3x3</button>
+                        <button onClick={() => setGridSize(4)}>4x4</button>
+                        <button onClick={() => setGridSize(5)}>5x5</button>
+                    </div>
                 </div>
-            ))}
-        </div>
-        <button className="rematch" onClick={handleRematch}>Rematch</button>
-    </div>
+            )
+        
+        }
+    </>
+    
   )
 }
 

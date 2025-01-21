@@ -64,6 +64,11 @@ function App() {
           <h1>Tic Tac Toe</h1>
         </div>
       </Link>
+      <Link to="/accordion">
+        <div className='card'>
+          <h1>Accordion</h1>
+        </div>
+      </Link>
     </div>
   );
 }

@@ -14,6 +14,7 @@ import FileUploader from './components/FileUploader';
 import BillSplit from './components/BillSplit';
 import ImageGallery from './components/ImageGallery';
 import TicTacToe from './components/TicTacToe';
+import Accordion from './components/Accordion';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -33,6 +34,7 @@ root.render(
         <Route path='/bill-split' element={<BillSplit />} />
         <Route path='/image-gallery' element={<ImageGallery />} />
         <Route path='/tic-tac-toe' element={<TicTacToe />} />
+        <Route path='/accordion' element={<Accordion />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

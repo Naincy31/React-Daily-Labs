@@ -1,7 +1,8 @@
-import { useState } from "react"
+import { useState, useMemo } from "react"
 
 const StarRating = () => {
-    const stars = Array(5).fill("\u2605")
+    const total = 5
+    const stars = useMemo(() => Array(total).fill(null), [total])
     const [rating, setRating] = useState(2)
     const [hovered, setHovered] = useState(null)
 
@@ -19,8 +20,8 @@ const StarRating = () => {
 
   return (
     <div className="star-rating">
-        {stars.map((star, index) => (
-            <span key={index} onMouseEnter={() => handleMouseEnter(index)} onMouseLeave={handleMouseLeave} onClick = {() => {handleClick(index)}}>{(hovered !== null ? index <= hovered : index < rating) ? star : "\u2606"}</span>
+        {stars.map((_, index) => (
+            <span key={index} onMouseEnter={() => handleMouseEnter(index)} onMouseLeave={handleMouseLeave} onClick = {() => {handleClick(index)}}>{(hovered !== null ? index <= hovered : index < rating) ? "\u2605" : "\u2606"}</span>
         ))}
     </div>
   )

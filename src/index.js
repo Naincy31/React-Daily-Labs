@@ -15,6 +15,7 @@ import BillSplit from './components/BillSplit';
 import ImageGallery from './components/ImageGallery';
 import TicTacToe from './components/TicTacToe';
 import Accordion from './components/Accordion';
+import StarRating from './components/StarRating';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -35,6 +36,7 @@ root.render(
         <Route path='/image-gallery' element={<ImageGallery />} />
         <Route path='/tic-tac-toe' element={<TicTacToe />} />
         <Route path='/accordion' element={<Accordion />} />
+        <Route path='/star-rating' element={<StarRating />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

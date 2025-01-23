@@ -69,6 +69,11 @@ function App() {
           <h1>Accordion</h1>
         </div>
       </Link>
+      <Link to="/star-rating">
+        <div className='card'>
+          <h1>Star Rating</h1>
+        </div>
+      </Link>
     </div>
   );
 }

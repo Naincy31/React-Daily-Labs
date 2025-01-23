@@ -658,3 +658,14 @@ input {
   text-align: left;
   font-size: 15px;
 }
+
+.star-rating {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+.star-rating span {
+  cursor: pointer;
+}

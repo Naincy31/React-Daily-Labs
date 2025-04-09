@@ -2,20 +2,22 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import App from './App';
-import Counter from './components/Counter';
-import GuessTheNumber from './components/GuessTheNumber';
-import StringTransform from './components/StringTransform';
-import TelephoneFormatter from './components/TelephoneFormatter';
-import Toast from './components/Toast';
-import ColorMe from './components/ColorMe';
-import BMICalculator from './components/BMICalculator';
-import DiceGame from './components/DiceGame';
-import FileUploader from './components/FileUploader';
-import BillSplit from './components/BillSplit';
-import ImageGallery from './components/ImageGallery';
-import TicTacToe from './components/TicTacToe';
-import Accordion from './components/Accordion';
-import StarRating from './components/StarRating';
+import Counter from './components/Counter/Counter';
+import GuessTheNumber from './components/GuessNumber/GuessTheNumber';
+import StringTransform from './components/StringTransform/StringTransform';
+import TelephoneFormatter from './components/TelephoneFormatter/TelephoneFormatter';
+import Toast from './components/Toast/Toast';
+import ColorMe from './components/Color/ColorMe';
+import BMICalculator from './components/Calculator/BMICalculator';
+import DiceGame from './components/Dice/DiceGame';
+import FileUploader from './components/FileUploader/FileUploader';
+import BillSplit from './components/Bill/BillSplit';
+import ImageGallery from './components/Gallery/ImageGallery';
+import TicTacToe from './components/TicTacToe/TicTacToe';
+import Accordion from './components/Accordion/Accordion';
+import StarRating from './components/Rating/StarRating';
+import ProgressBar from './components/ProgressBar/ProgressBar';
+import Todo from './components/Todo/Todo';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -37,6 +39,9 @@ root.render(
         <Route path='/tic-tac-toe' element={<TicTacToe />} />
         <Route path='/accordion' element={<Accordion />} />
         <Route path='/star-rating' element={<StarRating />} />
+        <Route path='/progress-bar' element={<ProgressBar />} />
+        <Route path='/todo' element={<Todo />} />
+        <Route path='*' element={<h1>Not Found</h1>} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

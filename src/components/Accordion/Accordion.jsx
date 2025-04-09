@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import questions from "../data/accordion-data"
+import questions from "../../data/accordion-data"
 
 const Accordion = () => {
     const [checkboxValue, setCheckboxValue] = useState(false)

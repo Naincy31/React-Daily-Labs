@@ -74,6 +74,16 @@ function App() {
           <h1>Star Rating</h1>
         </div>
       </Link>
+      <Link to="/progress-bar">
+        <div className='card'>
+          <h1>Progress Bar</h1>
+        </div>
+      </Link>
+      <Link to="/todo">
+        <div className='card'>
+          <h1>Todo List</h1>
+        </div>
+      </Link>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
-import uploadIcon from '../assets/upload.png'
-import docIcon from '../assets/google-docs.png'
+import uploadIcon from '../../assets/upload.png'
+import docIcon from '../../assets/google-docs.png'
 
 const FileUploader = () => {
     const [ file, setFile ] = useState('')

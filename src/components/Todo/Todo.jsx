@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useCallback, useState } from 'react'
 import TodoList from './TodoList'
 
 const Todo = () => {
@@ -7,27 +7,27 @@ const Todo = () => {
     const [editStatus, setEditStatus] = useState(false)
     const [editIndex, setEditIndex] = useState(null)
 
-    const handleCancel = () => {
+    const handleCancel = useCallback(() => {
         setInputText("")
         setEditStatus(false)
         setEditIndex(null)
-    }
+    }, [inputText])
 
-    const handleSubmit = () => {
+    const handleSubmit = useCallback(() => {
         if(inputText.trim() !== ""){
             setTodoList((prev) => [...prev, inputText])
             setInputText("")
         }
-    }
+    }, [inputText])
 
-    const handleUpdate = () => {
+    const handleUpdate = useCallback(() => {
         if(inputText.trim() !== "" && editIndex != null){
             setTodoList((prev) => prev.map((item, index) => ( index === editIndex ? inputText : item)))
             setInputText("")
             setEditStatus(false)
             setEditIndex(null)
         }
-    }
+    }, [inputText, editIndex])
 
   return (
     <div className='todo'>

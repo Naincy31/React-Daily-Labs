@@ -84,6 +84,11 @@ function App() {
           <h1>Todo List</h1>
         </div>
       </Link>
+      <Link to="/nested-checkbox">
+        <div className='card'>
+          <h1>Nested heckbox</h1>
+        </div>
+      </Link>
     </div>
   );
 }

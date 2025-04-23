@@ -18,6 +18,7 @@ import Accordion from './components/Accordion/Accordion';
 import StarRating from './components/Rating/StarRating';
 import ProgressBar from './components/ProgressBar/ProgressBar';
 import Todo from './components/Todo/Todo';
+import NestedCheckbox from './components/NestedCheckbox/NestedCheckbox';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -41,6 +42,7 @@ root.render(
         <Route path='/star-rating' element={<StarRating />} />
         <Route path='/progress-bar' element={<ProgressBar />} />
         <Route path='/todo' element={<Todo />} />
+        <Route path='/nested-checkbox' element={<NestedCheckbox />} />
         <Route path='*' element={<h1>Not Found</h1>} />
       </Routes>
     </BrowserRouter>

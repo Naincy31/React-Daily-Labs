@@ -89,6 +89,11 @@ function App() {
           <h1>Nested heckbox</h1>
         </div>
       </Link>
+      <Link to="/file-explorer">
+        <div className='card'>
+          <h1>File Explorer</h1>
+        </div>
+      </Link>
     </div>
   );
 }

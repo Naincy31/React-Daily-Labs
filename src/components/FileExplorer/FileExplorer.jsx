@@ -57,16 +57,26 @@ const data = [
 const FileExplorer = () => {
 
     const [fileStructure, setFileStructure] = useState(data)
+    const [expanded, setExpanded] = useState({})
+
+    const toggleExpanded = (label) => {
+        setExpanded((prev) => ({
+        ...prev,
+        [label]: !prev[label], 
+        }))
+    }
 
   return (
     <div>
         {
-            fileStructure.map((node) => (
+            fileStructure.map((node, index) => (
                 <FileNode
-                    key = {node.label}
+                    key = {`${node.label}-${index}`}
                     node = {node}
                     fileStructure = {fileStructure}
                     setFileStructure = {setFileStructure}
+                    expanded = {expanded}
+                    toggleExpanded = {toggleExpanded}
                 />
             ))
         }

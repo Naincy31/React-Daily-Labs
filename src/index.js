@@ -23,6 +23,7 @@ import FileExplorer from './components/FileExplorer/FileExplorer';
 import PhoneBook from './components/PhoneBook/PhoneBook';
 import QuizBuilder from './components/QuizBuilder/QuizBuilder';
 import BasicTicTac from './components/Basic-TicTacToe/BasicTicTac';
+import WeatherDashboard from './components/Weather/WeatherDashboard';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -51,6 +52,7 @@ root.render(
         <Route path='/phone-book' element={<PhoneBook />} />
         <Route path='/quiz-builder' element={<QuizBuilder />} />
         <Route path='/basic-tic-tac-toe' element={<BasicTicTac />} />
+        <Route path='/weather-dashboard' element={<WeatherDashboard />} />
         <Route path='*' element={<h1>Not Found</h1>} />
       </Routes>
     </BrowserRouter>

@@ -109,6 +109,11 @@ function App() {
           <h1>Basic Tic Tac Toe</h1>
         </div>
       </Link>
+      <Link to="/weather-dashboard">
+        <div className='card'>
+          <h1>Weather Dashboard</h1>
+        </div>
+      </Link>
     </div>
   );
 }

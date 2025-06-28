@@ -99,6 +99,11 @@ function App() {
           <h1>Phone Book</h1>
         </div>
       </Link>
+      <Link to="/quiz-builder">
+        <div className='card'>
+          <h1>Quiz Builder</h1>
+        </div>
+      </Link>
     </div>
   );
 }

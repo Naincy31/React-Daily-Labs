@@ -21,6 +21,7 @@ import Todo from './components/Todo/Todo';
 import NestedCheckbox from './components/NestedCheckbox/NestedCheckbox';
 import FileExplorer from './components/FileExplorer/FileExplorer';
 import PhoneBook from './components/PhoneBook/PhoneBook';
+import QuizBuilder from './components/QuizBuilder/QuizBuilder';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -47,6 +48,7 @@ root.render(
         <Route path='/nested-checkbox' element={<NestedCheckbox />} />
         <Route path='/file-explorer' element={<FileExplorer />} />
         <Route path='/phone-book' element={<PhoneBook />} />
+        <Route path='/quiz-builder' element={<QuizBuilder />} />
         <Route path='*' element={<h1>Not Found</h1>} />
       </Routes>
     </BrowserRouter>

@@ -94,6 +94,11 @@ function App() {
           <h1>File Explorer</h1>
         </div>
       </Link>
+      <Link to="/phone-book">
+        <div className='card'>
+          <h1>Phone Book</h1>
+        </div>
+      </Link>
     </div>
   );
 }

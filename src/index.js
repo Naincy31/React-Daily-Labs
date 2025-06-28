@@ -20,6 +20,7 @@ import ProgressBar from './components/ProgressBar/ProgressBar';
 import Todo from './components/Todo/Todo';
 import NestedCheckbox from './components/NestedCheckbox/NestedCheckbox';
 import FileExplorer from './components/FileExplorer/FileExplorer';
+import PhoneBook from './components/PhoneBook/PhoneBook';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -45,6 +46,7 @@ root.render(
         <Route path='/todo' element={<Todo />} />
         <Route path='/nested-checkbox' element={<NestedCheckbox />} />
         <Route path='/file-explorer' element={<FileExplorer />} />
+        <Route path='/phone-book' element={<PhoneBook />} />
         <Route path='*' element={<h1>Not Found</h1>} />
       </Routes>
     </BrowserRouter>

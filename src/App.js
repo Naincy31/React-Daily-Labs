@@ -104,6 +104,11 @@ function App() {
           <h1>Quiz Builder</h1>
         </div>
       </Link>
+      <Link to="/basic-tic-tac-toe">
+        <div className='card'>
+          <h1>Basic Tic Tac Toe</h1>
+        </div>
+      </Link>
     </div>
   );
 }

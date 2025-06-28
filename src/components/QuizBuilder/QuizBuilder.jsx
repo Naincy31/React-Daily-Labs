@@ -49,12 +49,14 @@ const QuizBuilder = () => {
         } else {
             setQuesIndex((prev) => prev + 1)
             setAnswer(null)
+            setFeedback(null)
         }
     }
 
   return (
     <div>
         <h1>QuizBuilder</h1>
+        <p>Question {quesIndex + 1} of {totalQuestions}</p>
         <h3>{questions[quesIndex].question}</h3>
         {questions[quesIndex].options.map((option, index) => (
             <div key={`${option}-${index}`}>
@@ -69,7 +71,7 @@ const QuizBuilder = () => {
                 <label htmlFor={option}>{option}</label>
             </div>
         ))}
-        <button onClick={handleSubmit} disabled={completeQuiz}>Submit</button>
+        <button onClick={handleSubmit} disabled={completeQuiz || answer === null}>Submit</button>
         
         <div id="feedback">
             {quesIndex !== 0 && !completeQuiz && feedback}

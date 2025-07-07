@@ -24,6 +24,8 @@ import PhoneBook from './components/PhoneBook/PhoneBook';
 import QuizBuilder from './components/QuizBuilder/QuizBuilder';
 import BasicTicTac from './components/Basic-TicTacToe/BasicTicTac';
 import WeatherDashboard from './components/Weather/WeatherDashboard';
+import ApolloTodo from './components/Apollo- Todo/Todo'
+import Chips from './components/Chips/Chips';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -53,6 +55,8 @@ root.render(
         <Route path='/quiz-builder' element={<QuizBuilder />} />
         <Route path='/basic-tic-tac-toe' element={<BasicTicTac />} />
         <Route path='/weather-dashboard' element={<WeatherDashboard />} />
+        <Route path='/apollo-todo' element={<ApolloTodo />} />
+        <Route path='/chips' element={<Chips />} />
         <Route path='*' element={<h1>Not Found</h1>} />
       </Routes>
     </BrowserRouter>

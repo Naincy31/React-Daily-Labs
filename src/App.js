@@ -114,6 +114,16 @@ function App() {
           <h1>Weather Dashboard</h1>
         </div>
       </Link>
+      <Link to="/apollo-todo">
+        <div className='card'>
+          <h1>Apollo Todo</h1>
+        </div>
+      </Link>
+      <Link to="/chips">
+        <div className='card'>
+          <h1>Chips</h1>
+        </div>
+      </Link>
     </div>
   );
 }

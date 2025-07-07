@@ -715,3 +715,32 @@ input {
 .todo-list-buttons .delete {
   background-color: red;
 }
+
+.chips-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.chips-container>.chip {
+  display: flex;
+  align-items: center;
+  padding: 4px 10px;
+  background-color: #e0e0e0;
+  /* lighter gray */
+  border-radius: 20px;
+  /* pill-like shape */
+  font-size: 14px;
+}
+
+.chip p {
+  margin: 0;
+}
+
+.chip-delete-btn {
+  margin-left: 8px;
+  cursor: pointer;
+  color: red;
+  font-weight: bold;
+}
